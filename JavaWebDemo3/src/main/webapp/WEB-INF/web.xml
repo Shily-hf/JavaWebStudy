@@ -1,0 +1,48 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <servlet>
+    <servlet-name>Demo3Servlet</servlet-name>
+    <servlet-class>servlet.Demo3Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Demo4Servlet</servlet-name>
+    <servlet-class>servlet.Demo4Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Demo5Servlet</servlet-name>
+    <servlet-class>servlet.Demo5Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Demo6Servlet</servlet-name>
+    <servlet-class>servlet.Demo6Servlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Demo7Servlet</servlet-name>
+    <servlet-class>servlet.Demo7Servlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Demo3Servlet</servlet-name>
+    <url-pattern>/demo3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Demo4Servlet</servlet-name>
+    <url-pattern>/demo4</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Demo5Servlet</servlet-name>
+    <url-pattern>/demo5</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Demo6Servlet</servlet-name>
+    <url-pattern>/demo6</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Demo7Servlet</servlet-name>
+    <url-pattern>/demo7</url-pattern>
+  </servlet-mapping>
+</web-app>

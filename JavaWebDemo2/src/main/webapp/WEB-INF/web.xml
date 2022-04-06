@@ -1,0 +1,23 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>edu.shily.servlet.servlet.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+
+  <!--
+  1.用户发送请求，action = add;
+  2.项目中，web.xml中找到12行的url-pattern = /add
+  3.找到11行的servlet-name = AddServlet
+  4.找和servlet-mapping中servlet-name一致的servlet,找到第7行
+  5.找第8行的servlet-class -> edu.shily.servlet.servlet.AddServlet
+  6.用户发送的是post请求（method = post） ,因此tomcat会执行AddServlet中的doPost方法
+  -->
+</web-app>

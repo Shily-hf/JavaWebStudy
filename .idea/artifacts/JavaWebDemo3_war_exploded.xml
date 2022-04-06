@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JavaWebDemo3:war exploded">
+    <output-path>$PROJECT_DIR$/JavaWebDemo3/target/JavaWebDemo3</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>JavaWebDemo3</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JavaWebDemo3" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/JavaWebDemo3/target/JavaWebDemo3/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="JavaWebDemo3/web/Web" />
+    </root>
+  </artifact>
+</component>

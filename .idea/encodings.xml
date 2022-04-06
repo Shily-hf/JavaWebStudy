@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/JavaWeb-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWeb-thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo3/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo4-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo4-thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo5-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo5-thymeleaf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo6-thymeleaf-pagination/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo6-thymeleaf-pagination/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo7-thymeleaf-keyword/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JavaWebDemo7-thymeleaf-keyword/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
