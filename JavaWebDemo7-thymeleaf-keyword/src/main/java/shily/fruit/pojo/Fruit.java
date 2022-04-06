@@ -1,4 +1,4 @@
-package edu.shily.fruit.pojo;
+package shily.fruit.pojo;
 
 /**
  * @author Shily-zhang

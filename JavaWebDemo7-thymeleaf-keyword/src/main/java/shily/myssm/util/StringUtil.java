@@ -1,4 +1,4 @@
-package edu.shily.myssm.util;
+package shily.myssm.util;
 
 /**
  * @author Shily-zhang

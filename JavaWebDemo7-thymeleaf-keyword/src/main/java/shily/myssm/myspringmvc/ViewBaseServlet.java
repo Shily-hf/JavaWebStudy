@@ -1,4 +1,4 @@
-package edu.shily.myssm.myspringmvc;
+package shily.myssm.myspringmvc;
 
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;

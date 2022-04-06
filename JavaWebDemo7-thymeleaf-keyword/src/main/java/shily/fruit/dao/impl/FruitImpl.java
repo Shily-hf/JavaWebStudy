@@ -1,8 +1,10 @@
-package edu.shily.fruit.dao.impl;
+package shily.fruit.dao.impl;
 
-import edu.shily.fruit.dao.FruitDAO;
-import edu.shily.fruit.pojo.Fruit;
-import edu.shily.myssm.basedao.BaseDAO;
+
+
+import shily.fruit.dao.FruitDAO;
+import shily.fruit.pojo.Fruit;
+import shily.myssm.basedao.BaseDAO;
 
 import java.util.List;
 /**
@@ -11,8 +13,8 @@ import java.util.List;
  */
 public class FruitImpl extends BaseDAO<Fruit> implements FruitDAO {
     @Override
-    public List<Fruit> getFruitList(Integer pageNo) {
-        return super.executeQuery("select * from t_fruit limit ?,5",(pageNo-1)*5);
+    public List<Fruit> getFruitList(String keyword,Integer pageNo) {
+        return super.executeQuery("select * from t_fruit where fname like ? or remark like ? limit ?,5","%"+keyword+"%","%"+keyword+"%",(pageNo-1)*5);
     }
 
     @Override
@@ -38,7 +40,7 @@ public class FruitImpl extends BaseDAO<Fruit> implements FruitDAO {
     }
 
     @Override
-    public int getFruitCount() {
-        return ((Long) super.executeComplexQuery("select count(*) from t_fruit")[0]).intValue();
+    public int getFruitCount(String keyword) {
+        return ((Long) super.executeComplexQuery("select count(*) from t_fruit where fname like ? or remark like ?","%"+keyword+"%","%"+keyword+"%")[0]).intValue();
     }
 }

@@ -1,4 +1,4 @@
-package edu.shily.demo;
+package shily.demo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,12 +12,12 @@ import java.io.IOException;
  * @Description
  */
 
-@WebServlet("/demo4")
-public class demo4Servlet extends HttpServlet {
+@WebServlet("/demo2")
+public class demo2Servlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //获取session保存作用域保存的数据，key为uname
-        Object unameObj = request.getSession().getAttribute("uname");
+        //获取request保存作用域保存的数据，key为uname
+        Object unameObj = request.getAttribute("uname");
         System.out.println("unameObj = " + unameObj);
 
     }

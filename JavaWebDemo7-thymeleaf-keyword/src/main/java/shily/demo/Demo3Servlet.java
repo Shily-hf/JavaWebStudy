@@ -1,4 +1,4 @@
-package edu.shily.demo;
+package shily.demo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

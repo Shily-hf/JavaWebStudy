@@ -1,6 +1,6 @@
-package edu.shily.fruit.dao;
+package shily.fruit.dao;
 
-import edu.shily.fruit.pojo.Fruit;
+import shily.fruit.pojo.Fruit;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface FruitDAO {
     //获取指定页码上的库存列表信息，每页显示5条
-    List<Fruit> getFruitList(Integer pageNo);
+    List<Fruit> getFruitList(String keyword,Integer pageNo);
 
     //根据fid获取特定的水果库存信息
     Fruit getFruitByFid(Integer fid);
@@ -25,6 +25,6 @@ public interface FruitDAO {
     void addFruit(Fruit fruit);
 
     //查询库存总记录数
-    int getFruitCount();
+    int getFruitCount(String keyword);
 
 }

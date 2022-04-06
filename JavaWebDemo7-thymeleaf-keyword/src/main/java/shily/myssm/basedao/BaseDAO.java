@@ -1,4 +1,4 @@
-package edu.shily.myssm.basedao;
+package shily.myssm.basedao;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;

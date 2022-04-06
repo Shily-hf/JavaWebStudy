@@ -1,4 +1,4 @@
-package edu.shily.demo;
+package shily.demo;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -10,17 +10,21 @@ import java.io.IOException;
 
 /**
  * @author Shily-zhang
- * @Description
+ * @Description 演示application保存作用域（demo5和demo6）
  */
+@WebServlet("/demo5")
+public class Demo5Servlet extends HttpServlet {
 
-@WebServlet("/demo6")
-public class demo6Servlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //获取application保存作用域保存的数据，key为uname
+        //1.向application保存作用域保存数据
+        //ServletContext：Servlet上下文
         ServletContext application = request.getServletContext();
-        Object unameObj = application.getAttribute("uname");
-        System.out.println("unameObj = " + unameObj);
-
+        application.setAttribute("uname","lili");
+        //客户端重定向
+        response.sendRedirect("demo6");
+        //服务器端转发
+//        response.getRequestDispatcher("demo6").forward(request,response);
     }
+
 }
