@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="JavaWebDemo7-thymeleaf-keyword:war exploded">
-    <output-path>$PROJECT_DIR$/JavaWebDemo7-thymeleaf-keyword/target/JavaWebDemo7-thymeleaf-keyword</output-path>
+  <artifact type="exploded-war" name="JavaWebDemo9-reflect:war exploded">
+    <output-path>$PROJECT_DIR$/JavaWebDemo9-reflect/target/JavaWebDemo9-reflect</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>JavaWebDemo7-thymeleaf-keyword</module>
+        <module>JavaWebDemo9-reflect</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="JavaWebDemo7-thymeleaf-keyword" />
+          <element id="module-output" name="JavaWebDemo9-reflect" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.11.RELEASE" />
@@ -25,9 +25,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/JavaWebDemo7-thymeleaf-keyword/target/JavaWebDemo7-thymeleaf-keyword/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/JavaWebDemo9-reflect/target/JavaWebDemo9-reflect/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="JavaWebDemo7-thymeleaf-keyword/web/Web" />
+      <element id="javaee-facet-resources" facet="JavaWebDemo9-reflect/web/Web" />
     </root>
   </artifact>
 </component>

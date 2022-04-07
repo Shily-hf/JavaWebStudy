@@ -2,8 +2,8 @@ package edu.shily.fruit.servlet;
 
 import edu.shily.fruit.dao.FruitDAO;
 import edu.shily.fruit.dao.impl.FruitImpl;
-import edu.shily.fruit.pojo.Fruit;
-import edu.shily.myssm.myspringmvc.ViewBaseServlet;
+import shily.fruit.pojo.Fruit;
+import shily.myssm.myspringmvc.ViewBaseServlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
