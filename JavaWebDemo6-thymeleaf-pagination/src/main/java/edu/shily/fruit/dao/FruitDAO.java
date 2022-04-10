@@ -1,6 +1,6 @@
 package edu.shily.fruit.dao;
 
-import shily.fruit.pojo.Fruit;
+import edu.shily.fruit.pojo.Fruit;
 
 import java.util.List;
 

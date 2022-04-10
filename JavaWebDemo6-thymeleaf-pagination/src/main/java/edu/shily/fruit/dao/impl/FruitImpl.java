@@ -1,8 +1,8 @@
 package edu.shily.fruit.dao.impl;
 
 import edu.shily.fruit.dao.FruitDAO;
-import shily.fruit.pojo.Fruit;
-import shily.myssm.basedao.BaseDAO;
+import edu.shily.fruit.pojo.Fruit;
+import edu.shily.myssm.basedao.BaseDAO;
 
 
 import java.util.List;

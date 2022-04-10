@@ -12,12 +12,15 @@
         <module name="JavaWebDemo2" />
         <module name="JavaWebDemo6-thymeleaf-pagination" />
         <module name="JavaWebDemo8-mvc" />
+        <module name="JavaWebDemo11-controller" />
         <module name="JavaWebDemo4-thymeleaf" />
         <module name="JavaWebDemo9-reflect" />
+        <module name="JavaWebDemo10-dispatcherServlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="JavaWeb-thymeleaf" target="8" />
+      <module name="JavaWebDemo10-dispatcherServlet" target="8" />
+      <module name="JavaWebDemo11-controller" target="8" />
       <module name="JavaWebDemo2" target="8" />
       <module name="JavaWebDemo3" target="1.7" />
       <module name="JavaWebDemo4-thymeleaf" target="8" />
@@ -27,5 +30,8 @@
       <module name="JavaWebDemo8-mvc" target="8" />
       <module name="JavaWebDemo9-reflect" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
   </component>
 </project>
