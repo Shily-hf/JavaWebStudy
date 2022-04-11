@@ -7,10 +7,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.DocumentBuilder;
@@ -42,8 +40,7 @@ public class DispatcherServlet extends ViewBaseServlet {
     public void init() throws ServletException {
         super.init();
         try {
-            InputStream inputStream = getClass().getClassLoader().getResourceAsStream("applicationContext.xml");
-            if (inputStream != null){
+                InputStream inputStream = getClass().getClassLoader().getResourceAsStream("applicationContext.xml");
                 //1.创建DocumentBuilderFactory
                 DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
                 //2.创建DocumentBuilder对象
@@ -64,10 +61,6 @@ public class DispatcherServlet extends ViewBaseServlet {
                         beanMap.put(beanId,beanObj);
                     }
                 }
-            }else {
-                throw new RuntimeException("Document不能为空");
-            }
-
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -85,7 +78,7 @@ public class DispatcherServlet extends ViewBaseServlet {
     }
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //设置编码
         request.setCharacterEncoding("UTF-8");
 
@@ -111,6 +104,7 @@ public class DispatcherServlet extends ViewBaseServlet {
 
         try {
             Method[] methods = controllerObj.getClass().getDeclaredMethods();
+
             for (Method method : methods) {
 
                 if (operate.equals(method.getName())) {
@@ -123,6 +117,9 @@ public class DispatcherServlet extends ViewBaseServlet {
                     for (int i = 0;i < parameters.length;i++){
                         Parameter parameter = parameters[i];
                         String parameterName = parameter.getName();
+
+                        System.out.println(parameterName);
+
                         //如果参数名是 request response session那么就不是通过请求中获取参数的方式
                         if ("request".equals(parameterName)){
                             parametersValues[i] = request;
