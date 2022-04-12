@@ -3,6 +3,7 @@ package edu.shily.fruit.service.impl;
 import edu.shily.fruit.dao.FruitDAO;
 import edu.shily.fruit.pojo.Fruit;
 import edu.shily.fruit.service.FruitService;
+import edu.shily.myssm.basedao.ConnUtil;
 
 import java.util.List;
 
@@ -16,12 +17,16 @@ public class FruitServiceImpl implements FruitService {
 
     @Override
     public List<Fruit> getFruitList(String keyword, Integer pageNo) {
+        System.out.println("getFruitList ->" + ConnUtil.getConn());
         return fruitDAO.getFruitList(keyword, pageNo);
     }
 
     @Override
     public void addFruit(Fruit fruit) {
         fruitDAO.addFruit(fruit);
+        Fruit fruit2 = fruitDAO.getFruitByFid(2);
+        fruit2.setFcount(99);
+        fruitDAO.updateFruit(fruit2);
     }
 
     @Override
@@ -36,6 +41,7 @@ public class FruitServiceImpl implements FruitService {
 
     @Override
     public Integer getPageCount(String keyword) {
+        System.out.println("getFruitList ->" + ConnUtil.getConn());
         int count = fruitDAO.getFruitCount(keyword);
         int pageCount = (count + 5 - 1) / 5;
         return pageCount;

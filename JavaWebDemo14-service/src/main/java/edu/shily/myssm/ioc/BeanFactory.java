@@ -1,4 +1,4 @@
-package edu.shily.myssm.io;
+package edu.shily.myssm.ioc;
 
 /**
  * @author Shily-zhang
