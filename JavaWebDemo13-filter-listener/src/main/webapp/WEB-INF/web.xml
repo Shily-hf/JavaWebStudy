@@ -1,0 +1,14 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <!--<filter>
+        <filter-name>Demo01Filter</filter-name>
+        <filter-class>edu.shily.filters.Demo01Filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Demo01Filter</filter-name>
+        <url-pattern>/Demo01.do</url-pattern>
+    </filter-mapping>-->
+</web-app>
