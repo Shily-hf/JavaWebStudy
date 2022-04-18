@@ -92,8 +92,8 @@ public abstract class BaseDAO<T> {
 
         //如果是自定义类型，则需要调用这个自定义类的带一个参数的构造方法，创建出这个自定义类的实例对象，然后将实例对象赋值给这个属性
         if (isMyType(typeName)){
-            Class<?> typeNameClass = Class.forName(typeName);
-            Constructor<?> constructor = typeNameClass.getDeclaredConstructor(Integer.class);
+            Class typeNameClass = Class.forName(typeName);
+            Constructor constructor = typeNameClass.getDeclaredConstructor(java.lang.Integer.class);
             propertyValue = constructor.newInstance(propertyValue);
         }
 
@@ -106,7 +106,8 @@ public abstract class BaseDAO<T> {
     private static boolean isNotMyType(String typeName){
         return "java.lang.Integer".equals(typeName)
             || "java.lang.String".equals(typeName)
-            || "java.time.LocalDateTime".equals(typeName);
+            || "java.time.LocalDateTime".equals(typeName)
+            || "java.util.Date".equals(typeName);
     }
 
     private static boolean isMyType(String typeName){

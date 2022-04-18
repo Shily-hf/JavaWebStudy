@@ -1,1 +1,15 @@
 left.html没有样式，同时数据也不展示，原因是：我们直接去请求的静态页面资源，那么并没有执行super.processTemplate(methodReturnStr, request, response);
+
+日志详情页面的实现
+1.已知topic的id,需要根据topic的id获取特定的topic
+2.获取这个topic关联的所有回复
+3.如果某个回复有主人回复，需要查询出来
+-在TpoicController中获取特定的topic
+-具体这个Reply中关联多少个Reply,由ReplyService内部实现
+同理
+-ReplyService内部是否有关联的HostReply,由HostReplyService去实现
+4.获取到的topic中的author只有id，那么需要在topicService的getTopic方法中封装，在查询topic本身信息时，同时需要调用userBasicService中的getUserBasicById来获取详细的author信息
+5.同理，在reply类中有author,而且这个author也只有id,我们需要根据id查询得到author，最后设置关联
+
+
+

@@ -28,9 +28,4 @@ public class ContextLoaderListener implements ServletContextListener {
         application.setAttribute("beanFactory",beanFactory);
     }
 
-    @Override
-    public void contextDestroyed(ServletContextEvent sce) {
-
-
-    }
 }

@@ -1,5 +1,6 @@
 package edu.shily.qqzone.pojo;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -9,13 +10,24 @@ import java.util.Date;
 public class Reply {
     private Integer id;
     private String content;
-    private Date replyDate;
+    private LocalDateTime replyDate;
     private UserBasic author;
     private Topic topic;    //M:1
 
     private HostReply hostReply;    //1:1
 
     public Reply() {
+    }
+
+    public Reply(Integer id) {
+        this.id = id;
+    }
+
+    public Reply(String content, LocalDateTime replyDate, UserBasic author, Topic topic) {
+        this.content = content;
+        this.replyDate = replyDate;
+        this.author = author;
+        this.topic = topic;
     }
 
     public Integer getId() {
@@ -34,11 +46,11 @@ public class Reply {
         this.content = content;
     }
 
-    public Date getReplyDate() {
+    public LocalDateTime getReplyDate() {
         return replyDate;
     }
 
-    public void setReplyDate(Date replyDate) {
+    public void setReplyDate(LocalDateTime replyDate) {
         this.replyDate = replyDate;
     }
 

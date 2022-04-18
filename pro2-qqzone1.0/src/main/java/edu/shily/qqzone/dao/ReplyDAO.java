@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface ReplyDAO {
     //获取指定日志的回复列表
-    List<Reply> getReolyList(Topic topic);
+    List<Reply> getReplyList(Topic topic);
 
     //添加回复
     void addReply(Reply reply);

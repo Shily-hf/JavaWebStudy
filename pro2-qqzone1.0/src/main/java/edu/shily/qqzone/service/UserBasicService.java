@@ -17,4 +17,5 @@ public interface UserBasicService {
 
     //根据id获取指定用户信息
     UserBasic getUserBasicById(Integer id);
+
 }

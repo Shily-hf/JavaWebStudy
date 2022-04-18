@@ -1,5 +1,7 @@
 package edu.shily.qqzone.pojo;
 
+
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 /**
@@ -11,7 +13,7 @@ public class UserDetail {
     private String realName;
     private String tel;
     private String email;
-    private LocalDateTime bitrh;
+    private Date bitrh;
     private String star;
 
     public UserDetail() {
@@ -49,11 +51,11 @@ public class UserDetail {
         this.email = email;
     }
 
-    public LocalDateTime getBitrh() {
+    public Date getBitrh() {
         return bitrh;
     }
 
-    public void setBitrh(LocalDateTime bitrh) {
+    public void setBitrh(Date bitrh) {
         this.bitrh = bitrh;
     }
 

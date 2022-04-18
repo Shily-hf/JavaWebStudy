@@ -2,6 +2,7 @@ package edu.shily.qqzone.pojo;
 
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,6 +19,12 @@ public class Topic {
     private List<Reply> replyList;  //1:N
 
     public Topic() {
+    }
+
+
+
+    public Topic(Integer id) {
+        this.id = id;
     }
 
     public Integer getId() {
