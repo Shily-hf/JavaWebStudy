@@ -16,6 +16,12 @@ public class HostReply {
     public HostReply() {
     }
 
+    public HostReply(String content, LocalDateTime hostReplyDate, UserBasic author) {
+        this.content = content;
+        this.hostReplyDate = hostReplyDate;
+        this.author = author;
+    }
+
     public HostReply(Integer id) {
         this.id = id;
     }

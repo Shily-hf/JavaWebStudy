@@ -1,6 +1,5 @@
 package edu.shily.qqzone.service.impl;
 
-import edu.shily.qqzone.dao.HostReplyDAO;
 import edu.shily.qqzone.dao.ReplyDAO;
 import edu.shily.qqzone.pojo.HostReply;
 import edu.shily.qqzone.pojo.Reply;
@@ -44,5 +43,30 @@ public class ReplyServiceImpl implements ReplyService {
     @Override
     public void addReply(Reply reply) {
         replyDAO.addReply(reply);
+    }
+
+    @Override
+    public void delReply(Integer id) {
+        //根据id获取到reply
+        Reply reply = replyDAO.getReply(id);
+        if (reply != null){
+            //如果reply有关联的hostReply,则先删除hostReply
+            HostReply hostReply = hostReplyService.getHostReplyByReplyId(reply.getId());
+            if (hostReply!=null){
+                hostReplyService.delHostReply(hostReply.getId());
+            }
+            //删除reply
+            replyDAO.delReply(id);
+        }
+    }
+
+    @Override
+    public void delReplyList(Topic topic) {
+        List<Reply> replyList = replyDAO.getReplyList(topic);
+        if (replyList!=null){
+            for (Reply reply : replyList){
+                delReply(reply.getId());
+            }
+        }
     }
 }

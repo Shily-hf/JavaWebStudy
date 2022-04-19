@@ -26,4 +26,9 @@ public class ReplyDAOImpl extends BaseDAO<Reply> implements ReplyDAO {
     public void delReply(Integer id) {
         executeUpdate("delete from t_reply where id = ?" ,id);
     }
+
+    @Override
+    public Reply getReply(Integer id) {
+        return load("select * from t_reply where id =?",id);
+    }
 }

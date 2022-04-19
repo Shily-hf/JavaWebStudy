@@ -95,7 +95,7 @@ public class DispatcherServlet extends ViewBaseServlet {
 
                             Object parameterObj = parameterValue;
                             if (parameterObj != null){
-                                if ("java.lang.Integer".equals(typeName)){
+                                if ("java.lang.Integer".equals(typeName) && parameterValue != null){
                                     parameterObj = Integer.parseInt(parameterValue);
                                 }
                             }

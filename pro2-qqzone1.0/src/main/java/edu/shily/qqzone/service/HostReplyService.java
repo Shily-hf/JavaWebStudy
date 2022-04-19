@@ -8,4 +8,9 @@ import edu.shily.qqzone.pojo.HostReply;
  */
 public interface HostReplyService {
     HostReply getHostReplyByReplyId(Integer replyId);
+
+    //添加主人回复
+    void addHostReply(HostReply hostReply);
+
+    void delHostReply(Integer id);
 }

@@ -14,7 +14,7 @@ public class ConnUtil {
 
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver" ;
     //jdbc:mysql://localhost:3306/qqzonedb2
-    public static final String URL = "jdbc:mysql://localhost:3306/qqzonedb2?useUnicode=true&characterEncoding=utf-8&useSSL=false";
+    public static final String URL = "jdbc:mysql://localhost:3306/qqzonedb?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true";
     public static final String USER = "root";
     public static final String PWD = "201008hf" ;
 
