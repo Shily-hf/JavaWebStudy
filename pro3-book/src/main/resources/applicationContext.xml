@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<beans>
+   <bean id="page" class="edu.shily.book.myssm.myspringmvc.PageController"></bean>
+
+   <!--DAO-->
+   <bean id="userDAO" class="edu.shily.book.dao.impl.UserDAOImpl" />
+
+   <!--Service-->
+   <bean id="userService" class="edu.shily.book.service.impl.UserServiceImpl">
+      <property name ="userDAO" ref="userDAO" />
+   </bean>
+
+   <!--Controller-->
+   <bean id="user" class="edu.shily.book.controller.UserController">
+      <property name="userService" ref="userService" />
+   </bean>
+</beans>
