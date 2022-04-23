@@ -7,6 +7,8 @@
    <bean id="userDAO" class="edu.shily.book.dao.impl.UserDAOImpl" />
    <bean id="bookDAO" class="edu.shily.book.dao.impl.BookDAOImpl" />
    <bean id="cartItemDAO" class="edu.shily.book.dao.impl.CartItemDAOImpl" />
+   <bean id="orderDAO" class="edu.shily.book.dao.impl.OrderDAOImpl" />
+   <bean id="orderItemDAO" class="edu.shily.book.dao.impl.OrderItemImpl" />
 
    <!--Service-->
    <bean id="userService" class="edu.shily.book.service.impl.UserServiceImpl">
@@ -19,6 +21,11 @@
       <property name="cartItemDAO" ref="cartItemDAO" />
       <property name="bookService" ref="bookService" />
    </bean>
+   <bean id="orderService" class="edu.shily.book.service.impl.OrderServiceImpl">
+      <property name="orderDAO" ref="orderDAO" />
+      <property name="orderItemDAO" ref="orderItemDAO" />
+      <property name="cartItemDAO" ref="cartItemDAO" />
+   </bean>
 
    <!--Controller-->
    <bean id="user" class="edu.shily.book.controller.UserController">
@@ -30,5 +37,8 @@
    </bean>
    <bean id="cart" class="edu.shily.book.controller.CartController">
       <property name="cartItemService" ref="cartItemService" />
+   </bean>
+   <bean id="order" class="edu.shily.book.controller.OrderController">
+      <property name="orderService" ref="orderService" />
    </bean>
 </beans>

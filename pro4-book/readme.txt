@@ -19,3 +19,12 @@
     -新建BookService、BookService : getBookList()
     -新建BookController : index()
     -编辑index.html页面
+
+2.首页上登录成功之后显示欢迎语和购物车数量
+3.点击具体图书添加到购物车按钮
+4.购物车详情
+
+5.结账
+    1）订单添加一条记录
+    2）订单详情表添加7条记录
+    3）购物车项表中需要删除对应的7条记录
