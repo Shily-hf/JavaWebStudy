@@ -1,23 +1,25 @@
-package edu.shily.servlets;
+package edu.shily.cookies.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
  * @author Shily-zhang
  * @Description
  */
-@WebServlet("/demo01.do")
-public class Demo1Servlet extends HttpServlet {
+
+@WebServlet("/kaptcha01")
+public class KaptchaServletDemo01 extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("demo1 service......");
-        request.getRequestDispatcher("success.html").forward(request,response);
+        HttpSession session = request.getSession();
+        Object obj = session.getAttribute("KAPTCHA_SESSION_KEY");
+        System.out.println("obj = " + obj);
     }
-
 }
