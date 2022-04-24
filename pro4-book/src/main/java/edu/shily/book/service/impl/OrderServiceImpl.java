@@ -9,6 +9,7 @@ import edu.shily.book.pojo.OrderItem;
 import edu.shily.book.pojo.User;
 import edu.shily.book.service.OrderService;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,7 +21,6 @@ public class OrderServiceImpl implements OrderService {
     private OrderDAO orderDAO;
     private OrderItemDAO orderItemDAO;
     private CartItemDAO cartItemDAO;
-
     @Override
     public void addOrderBean(OrderBean orderBean) {
 //        1）订单添加一条记录
@@ -45,5 +45,17 @@ public class OrderServiceImpl implements OrderService {
             cartItemDAO.delCartItem(cartItem);
         }
 
+    }
+
+    @Override
+    public List<OrderBean> getOrderList(User user) {
+        List<OrderBean> orderList = orderDAO.getOrderList(user);
+
+        for (OrderBean orderBean : orderList){
+            Integer totalBookCount = orderDAO.getOrderTotalBookCount(orderBean);
+            orderBean.setTotalBookCount(totalBookCount);
+        }
+
+        return orderList;
     }
 }

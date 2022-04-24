@@ -6,6 +6,7 @@ import edu.shily.book.service.OrderService;
 
 import javax.servlet.http.HttpSession;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -33,5 +34,17 @@ public class OrderController {
         orderService.addOrderBean(orderBean);
 
         return "index";
+    }
+
+    //查看订单列表
+    public String getOrderList(HttpSession session){
+        User user = (User) session.getAttribute("currentUser");
+
+        List<OrderBean> orderList = orderService.getOrderList(user);
+        user.setOrderList(orderList);
+
+        session.setAttribute("currentUser",user);
+
+        return "order/order";
     }
 }

@@ -1,5 +1,7 @@
 package edu.shily.book.pojo;
 
+import java.math.BigDecimal;
+
 /**
  * @author Shily-zhang
  * @Description
@@ -11,7 +13,7 @@ public class CartItem {
     private Book book;
     private Integer buyCount;
     private User userBean;
-
+    private Double xj;      //小计，用于存储计算出的费用
     public CartItem() {
     }
 
@@ -23,6 +25,11 @@ public class CartItem {
         this.book = book;
         this.buyCount = buyCount;
         this.userBean = userBean;
+    }
+
+    public CartItem(Integer id, Integer buyCount) {
+        this.id = id;
+        this.buyCount = buyCount;
     }
 
     public Integer getId() {
@@ -55,5 +62,13 @@ public class CartItem {
 
     public void setUserBean(User userBean) {
         this.userBean = userBean;
+    }
+
+    public Double getXj() {
+        BigDecimal bigDecimalPrice = new BigDecimal(getBook().getPrice() + "");
+        BigDecimal bigDecimalCount = new BigDecimal("" + buyCount);
+        BigDecimal bigDecimalXJ = bigDecimalPrice.multiply(bigDecimalCount);
+        xj = bigDecimalXJ.doubleValue();
+        return xj;
     }
 }

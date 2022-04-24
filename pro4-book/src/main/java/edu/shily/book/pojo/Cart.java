@@ -29,7 +29,7 @@ public class Cart {
             Set<Map.Entry<Integer, CartItem>> entries = cartItemMap.entrySet();
             for (Map.Entry<Integer,CartItem> cartItemEntry : entries){
                 CartItem cartItem = cartItemEntry.getValue();
-                totalMoney = totalMoney + cartItem.getBook().getPrice() * cartItem.getBuyCount();
+                totalMoney = totalMoney + cartItem.getXj();
             }
         }
         return totalMoney;

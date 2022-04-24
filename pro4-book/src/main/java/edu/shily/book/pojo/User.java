@@ -1,5 +1,7 @@
 package edu.shily.book.pojo;
 
+import java.util.List;
+
 /**
  * @author Shily-zhang
  * @Description
@@ -11,6 +13,7 @@ public class User {
     private String email;
     private Integer role;
     private Cart cart;
+    private List<OrderBean> orderList;      //1:N
 
     public User() {
     }
@@ -65,5 +68,13 @@ public class User {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public List<OrderBean> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<OrderBean> orderList) {
+        this.orderList = orderList;
     }
 }
