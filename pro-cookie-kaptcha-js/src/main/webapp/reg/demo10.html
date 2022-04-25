@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+        //var reg = /[abc]/gim;          //[]表示集合，表示只要满足其一即可，如果没有[]必须进行精确匹配
+        //var reg = /[^abc]/gim;          //[^]中括号中的^表示取反
+        var reg = /[a-g]/gim;          //[ - ]中括号中的-表示范围
+        var str = "hello world"    //只要有一处匹配就为true
+        str = str.replace(reg,"A");
+        console.log(str);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
