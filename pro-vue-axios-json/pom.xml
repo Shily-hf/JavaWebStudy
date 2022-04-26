@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>edu.shily</groupId>
-  <artifactId>JavaWebDemo13-filter-listener</artifactId>
+  <artifactId>pro-vue-axios-json</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>JavaWebDemo13-filter-listener Maven Webapp</name>
+  <name>pro-vue-axios-json Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -29,7 +29,7 @@
   </dependencies>
 
   <build>
-    <finalName>JavaWebDemo13-filter-listener</finalName>
+    <finalName>pro-vue-axios-json</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>

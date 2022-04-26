@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript" src="script/vue.js"></script>
+    <script language="JavaScript">
+        window.onload=function (){
+            var vue = new Vue({
+                "el":"#div0",
+                data:{
+                    fruitList:[
+                        {fname:"apple",price:5,fcount:100,remark:"ok"},
+                        {fname:"banala",price:4,fcount:199,remark:"oka"},
+                        {fname:"orange",price:6,fcount:99,remark:"okb"},
+                        {fname:"milt",price:12,fcount:90,remark:"okc"}
+                    ]
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="div0">
+        <table border="1" width="400" cellpadding="4" cellspacing="0">
+            <tr>
+                <th>名称</th>
+                <th>单价</th>
+                <th>库存</th>
+                <th>备注</th>
+            </tr>
+            <!--v-for表示迭代-->
+            <tr align="center" v-for="fruit in fruitList">
+                <td>{{fruit.fname}}</td>
+                <td>{{fruit.price}}</td>
+                <td>{{fruit.fcount}}</td>
+                <td>{{fruit.remark}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
