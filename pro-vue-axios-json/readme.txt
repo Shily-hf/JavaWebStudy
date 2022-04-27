@@ -31,3 +31,39 @@ Axios
        .then(function(value){})     //成功响应时执行回调     value.data可以获取到服务器响应的内容
        .catch(function(reason){})   //有异常时执行回调      reason.response.data可以获取到响应内容
                                                          reason.message / reason.stack 可以查看错误的信息
+
+    什么是JSON
+        JSON是一种数据格式
+        XML也是一种数据格式
+
+        XML格式表示两个学院信息的代码如下
+        <students>
+            <student sid="s001">
+                <sname>jim</sname>
+                <age>18</age>
+            </student>
+             <student sid="s002">
+                 <sname>tom</sname>
+                 <age>19</age>
+            </student>
+        </students>
+
+        JSON格式表示两个学院信息代码如下：
+        [{sid:"s001",age:18},{sid:"s002",age:19}]
+        -JSON表达数据更简洁，更能够节约网络带宽
+        -客户端发送JSON格式的数据给服务器端
+        1）客户端中param需要修改成：data:
+        2）服务器获取参数值不再是 request.getParamter().....
+            而是
+             StringBuffer stringBuffer = new StringBuffer("");
+             BufferedReader bufferedReader = request.getReader();
+             String str = null;
+             while ((str=bufferedReader.readLine())!=null){
+                    stringBuffer.append(str);
+             }
+             str =stringBuffer.toString();
+
+        3)我们会发现str的内容如下
+        {"uname":"lina","pwd":"ok"}
+
+        -服务器端给客户端响应JSON格式的字符串，然后客户端需要将字符串转换成js object
